@@ -3,9 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{AFDD7EB8-EAFF-4491-9CEE-C99AF344933C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EticaretAPI.Domain", "Core\EticaretAPI.Domain\EticaretAPI.Domain.csproj", "{EDF23A9E-E680-4BDC-8458-31529BB5A3C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{CB643408-A759-4CDE-9EDB-4D155313B2FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EticaretAPI.Infrastructure", "Infrastructure\EticaretAPI.Infrastructure\EticaretAPI.Infrastructure.csproj", "{1F68007B-15B1-4AD1-97CB-52B0F1325F9A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDF23A9E-E680-4BDC-8458-31529BB5A3C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDF23A9E-E680-4BDC-8458-31529BB5A3C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDF23A9E-E680-4BDC-8458-31529BB5A3C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDF23A9E-E680-4BDC-8458-31529BB5A3C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F68007B-15B1-4AD1-97CB-52B0F1325F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F68007B-15B1-4AD1-97CB-52B0F1325F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F68007B-15B1-4AD1-97CB-52B0F1325F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F68007B-15B1-4AD1-97CB-52B0F1325F9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EDF23A9E-E680-4BDC-8458-31529BB5A3C5} = {AFDD7EB8-EAFF-4491-9CEE-C99AF344933C}
+		{1F68007B-15B1-4AD1-97CB-52B0F1325F9A} = {CB643408-A759-4CDE-9EDB-4D155313B2FF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {155B897E-5F42-4520-A97B-4C9FA06B8529}
