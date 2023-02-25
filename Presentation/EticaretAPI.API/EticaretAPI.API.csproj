@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\EticaretAPI.Application\EticaretAPI.Application.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\EticaretAPI.Persistence\EticaretAPI.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>
