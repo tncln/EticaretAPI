@@ -1,5 +1,5 @@
-﻿using EticaretAPI.Application.Abstractions;
-using EticaretAPI.Persistence.Concretes;
+﻿using Microsoft.EntityFrameworkCore;
+using EticaretAPI.Persistence.Contexts;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ namespace EticaretAPI.Persistence
         //API da yer alan IOC eklemek için kullanılır. 
         public static void AddPersistenceServices(this IServiceCollection services)
         {
-            services.AddSingleton<IProductService, ProductService>();
+            services.AddDbContext<EticaretAPIDbContext>(options => options.UseNpgsql("User ID=postgres;Password=postgrespw;Host=localhost;Port=32768;Database=EticaretAPI"));
         }
     }
 }
