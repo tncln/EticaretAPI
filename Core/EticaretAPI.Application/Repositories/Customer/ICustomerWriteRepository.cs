@@ -1,5 +1,4 @@
-﻿using EticaretAPI.Domain.Entities.Common;
-using Microsoft.EntityFrameworkCore;
+﻿using EticaretAPI.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace EticaretAPI.Application.Repositories
 {
-    public interface IRepository<T> where T : BaseEntity
+    public interface ICustomerWriteRepository : IWriteRepository<Customer>
     {
-        DbSet<T> Table { get; }
     }
 }

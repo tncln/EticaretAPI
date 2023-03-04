@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EticaretAPI.Application.Repositories;
+using EticaretAPI.Persistence.Repositories;
 
 namespace EticaretAPI.Persistence
 {
@@ -14,7 +16,13 @@ namespace EticaretAPI.Persistence
         //API da yer alan IOC eklemek için kullanılır. 
         public static void AddPersistenceServices(this IServiceCollection services)
         {
-            services.AddDbContext<EticaretAPIDbContext>(options => options.UseNpgsql("User ID=postgres;Password=postgrespw;Host=localhost;Port=32768;Database=EticaretAPI"));
+            services.AddDbContext<EticaretAPIDbContext>(options => options.UseNpgsql(Configuration.ConnectionString), ServiceLifetime.Singleton);
+            services.AddSingleton<ICustomerReadRepository,CustomerReadRepository>();
+            services.AddSingleton<ICustomerWriteRepository, CustomerWriteRepository>();
+            services.AddSingleton<IOrderReadRepository, OrderReadRepository>();
+            services.AddSingleton<IOrderWriteRepository, OrderWriteRepository>();
+            services.AddSingleton<IProductReadRepository, ProductReadRepository>();
+            services.AddSingleton<IProductWriteRepository, ProductWriteRepository>();
         }
     }
 }
