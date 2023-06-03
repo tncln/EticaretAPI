@@ -30,6 +30,7 @@ namespace EticaretAPI.Persistence.Contexts
                 {
                     EntityState.Added => data.Entity.CreatedDate = DateTime.UtcNow,
                     EntityState.Modified => data.Entity.ModifiedDate = DateTime.UtcNow,
+                    _ => DateTime.UtcNow
                 };
             } 
             return await base.SaveChangesAsync(cancellationToken);
